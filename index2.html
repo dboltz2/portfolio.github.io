@@ -1,0 +1,286 @@
+<!-- Section Our Goals -->
+<section id="ourGoals" class="mt-8 transform translate-y-8 transition-all duration-1000 ease-in-out py-10">
+  <div class="container flex grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div class="rounded-xl overflow-hidden m-10 shadow-md">
+      <div class="w-full">
+        <img
+          id="ourGoalsImage"
+          class="w-full h-auto object-cover ourGoalsImage"
+          src="https://img.freepik.com/free-photo/low-angle-hand-top_23-2148576833.jpg?t=st=1733901262~exp=1733904862~hmac=de9ebe65c655bcff482d4038f1140fc442811a6b4f09e324bb933f62e166a5d1&w=900"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="description ml-12">
+      <p class="text-xl font-bold border border-gray-500 w-28 rounded-full text-center text-gray-500">Our Goals</p>
+      <p class="text-6xl font-bold">Empowering the Next Generation to Thrive</p>
+      <p id="dynamic-description" class="mt-4 text-lg">
+        Through hands-on workshops, immersive historical site visits, and tailored internship programs, we foster creativity, leadership, and a mindset of lifelong learning. Our goal is to create a vibrant community where fresh graduates
+        can confidently explore new opportunities, build meaningful networks, and lead with purpose in an ever-changing world.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gen-Z Program</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"
+      integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:wght@300&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:wght@300&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:wght@300&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:wght@300&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </head>
+  <body id="main" class="bg-gray-200">
+    <section id="section1" class="relative h-screen bg-cover bg-center" style="background-image: url(gen-l.jpg)">
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div class="absolute top-4 left-4 z-20 flex items-center gap-2 text-white">
+        <div class="flex-shrink-0 w-4 h-4 bg-orange-500 rounded-full"></div>
+        <h1 class="text-2xl font-bold">Gen Z NPH</h1>
+      </div>
+      <div class="relative z-10 flex items-center justify-center h-full text-center text-white">
+        <div>
+          <h1 id="typingText" class="text-4xl font-bold md:text-6xl"></h1>
+          <p id="empoweringText" class="mt-4 text-lg md:text-xl">Empowering your future through innovation and creativity</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section About Us -->
+    <section id="aboutUs" class="mt-14 transform translate-y-8 transition-all duration-1000 ease-in-out py-10">
+      <div class="container">
+        <div class="description mx-10 mb-36 sm:mx-64">
+          <p class="text-xl font-bold border border-gray-500 w-28 rounded-full text-center text-gray-500">About Us</p>
+          <p class="text-6xl font-extrabold">Curious about how Gen-Z is shaping the future?</p>
+          <!-- Elemen deskripsi dinamis -->
+          <p id="dynamic-description" class="mt-4 text-xl font-medium">
+            Gen-Z empowers young professionals through innovation, creativity, and hands-on programs like workshops and historical site visits. We bridge the gap between education and the professional world, fostering growth and
+            connections. Join us to explore new career paths and shape the future together!
+          </p>
+        </div>
+
+        <!-- Flexbox container to position images differently -->
+        <div class="flex flex-col sm:flex-row gap-10 sm:gap-64 items-center sm:items-start justify-center">
+          <div class="flex-shrink-0">
+            <img
+              id="aboutUsImage1"
+              class="w-full sm:w-96 opacity-0"
+              src="https://images.unsplash.com/photo-1625283518288-00362afc8663?q=80&w=1885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 1"
+            />
+          </div>
+          <div class="flex-shrink-0 mt-36">
+            <img
+              id="aboutUsImage2"
+              class="w-full sm:w-96 opacity-0"
+              src="https://images.unsplash.com/photo-1595425178239-7f2e3af36041?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 2"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-28 mb-10">
+      <div class="description mx-10 mb-36 sm:mx-64">
+        <!-- <p class="text-6xl font-extrabold">Curious about how Gen-Z is shaping the future?</p> -->
+        <!-- Elemen deskripsi dinamis -->
+        <p class="text-lg mb-8 font-bold">(Our Goals)</p>
+        <p id="dynamic-description" class="mt-4 text-xl font-medium">
+          At Gen-Z, our goal is to empower the next generation of leaders by providing transformative experiences that inspire growth, creativity, and professional development. We aim to spark innovation by encouraging young professionals
+          to think outside the box through workshops and hands-on projects. By bridging the gap between education and real-world experiences, we help equip them with the skills needed to excel in today’s rapidly evolving job market. Through
+          our programs, we foster meaningful connections, build confidence, and prepare the leaders of tomorrow to face the challenges of an ever-changing world.
+        </p>
+      </div>
+    </section>
+
+    <!-- <section
+      class="relative h-screen bg-cover bg-center"
+      style="background-image: url()"
+    ></section> -->
+    <div class="img-div">
+      <div class="img"></div>
+    </div>
+
+    <section class="mt-28 mb-10">
+      <div class="flex grid grid-cols-1 md:grid-cols-2 gap-10 description mx-10 mb-20 sm:mx-64">
+        <p class="text-4xl font-extrabold">"Collaborating for a Brighter Tomorrow : Our Partnership with Generasi Literat"</p>
+        <!-- Elemen deskripsi dinamis -->
+        <!-- <p class="text-lg mb-8">(Our Goals)</p> -->
+        <p id="dynamic-description" class="text-lg font-medium">
+          At Gen-Z, we believe in the power of collaboration to create lasting impact. That’s why we’re proud to partner with Generasi Literat, an organization dedicated to fostering literacy and education for the next generation. Together,
+          we aim to bridge the gap between knowledge and opportunity by providing young people with the resources they need to succeed. <br />Through this partnership, we combine our strengths in innovation and professional development with
+          Generasi Literat’s expertise in education and literacy, creating a powerful synergy that empowers youth to shape a brighter future. By working hand in hand, we are building a foundation of knowledge, creativity, and leadership
+          that will inspire positive change in the communities we serve.
+        </p>
+      </div>
+    </section>
+
+    <section class="relative h-screen bg-cover bg-center" style="background-image: url(gen-l.jpg)"></section>
+
+    <style>
+      * {
+        font-family: "Lato", sans-serif;
+      }
+      #empoweringText {
+        opacity: 0; /* Awalnya teks disembunyikan */
+        transform: translateY(30px); /* Posisikan teks sedikit lebih rendah dari posisi aslinya */
+      }
+
+      .img-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        /* background-color: rgb(100, 183, 255); */
+      }
+
+      .img {
+        width: 50vw;
+        height: 50vh;
+        background-image: url(https://images.unsplash.com/photo-1669042447722-ea8dac27b71d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+
+    <script>
+      // Register GSAP TextPlugin
+      gsap.registerPlugin(TextPlugin, ScrollTrigger);
+
+      // GSAP Typing Effect
+      const typingText = "Let’s come Be Part of Changes"; // Teks yang ingin diketik
+      const typingElement = document.getElementById("typingText");
+      const empoweringElement = document.getElementById("empoweringText");
+
+      // Animasi mengetik teks
+      gsap.to(typingElement, {
+        duration: typingText.length * 0.1, // Durasi total mengetik
+        text: typingText, // Teks yang akan diketik
+        ease: "none", // Tanpa easing, agar efek mengetik konsisten
+        onComplete: () => {
+          // Setelah selesai mengetik, tampilkan teks "Empowering" dengan animasi dari bawah
+          gsap.to(empoweringElement, {
+            opacity: 1,
+            y: 0, // Posisi akhir normal (y = 0)
+            duration: 1, // Durasi animasi
+            ease: "power2.out", // Easing animasi
+            delay: 0.5, // Delay sebelum teks muncul
+          });
+        },
+      });
+
+      // Animasi gambar pertama dengan ScrollTrigger
+      gsap.fromTo(
+        "#aboutUsImage1",
+        { y: 100, opacity: 0 }, // Posisi awal
+        {
+          y: 0, // Posisi akhir
+          opacity: 1, // Muncul sepenuhnya
+          duration: 1.5, // Durasi animasi
+          ease: "power2.out", // Efek ease
+          scrollTrigger: {
+            trigger: "#aboutUsImage1", // Elemen yang memicu animasi
+            start: "top 80%", // Mulai animasi saat elemen berada di 80% viewport
+            toggleActions: "restart none none none", // Animasi diulang saat masuk viewport
+          },
+        }
+      );
+
+      // Animasi gambar kedua dengan ScrollTrigger
+      gsap.fromTo(
+        "#aboutUsImage2",
+        { y: 100, opacity: 0 }, // Posisi awal
+        {
+          y: 0, // Posisi akhir
+          opacity: 1, // Muncul sepenuhnya
+          duration: 2.5, // Durasi animasi
+          ease: "power2.out", // Efek ease
+          scrollTrigger: {
+            trigger: "#aboutUsImage2", // Elemen yang memicu animasi
+            start: "top 80%", // Mulai animasi saat elemen berada di 80% viewport
+            toggleActions: "restart none none none", // Animasi diulang saat masuk viewport
+          },
+        }
+      );
+
+      // Animasi zoom pada gambar dengan ScrollTrigger
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".img-div", // Elemen pemicu
+          start: "top top", // Mulai animasi saat elemen mencapai atas viewport
+          end: "+=300", // Perluasan durasi animasi
+          scrub: 1, // Scroll scrub
+          pin: true, // Elemen tetap berada di tempat
+        },
+      });
+
+      tl.to(".img", {
+        width: "100vw",
+        height: "100vh",
+      });
+
+      // Pastikan elemen #empoweringText tidak langsung terlihat
+      empoweringElement.style.opacity = "0";
+      empoweringElement.style.transform = "translateY(20px)";
+    </script>
+  </body>
+</html>
+
+<section class="mt-28 bg-gray-800 text-white pt-20 pb-10">
+  <div class="flex grid grid-cols-1 md:grid-cols-2 gap-10 description mx-10 mb-20 sm:mx-64">
+    <div>
+      <p class="text-4xl font-extrabold">"Collaborating for a Brighter Tomorrow: Our Partnership with Generasi Literat"</p>
+      <!-- Logo partnership -->
+      <div class="mt-6 flex justify-center">
+        <img src="https://ugc.production.linktr.ee/62ss4Vi4RtmpxluiJUxl_7lsEkNw2AEBsOhu6" alt="Generasi Literat Logo" class="w-1/2" />
+      </div>
+    </div>
+    <p id="dynamic-description" class="text-lg font-medium">
+      At Gen-Z, we believe in the power of collaboration to create lasting impact. That’s why we’re proud to partner with Generasi Literat, an organization dedicated to fostering literacy and education for the next generation. Together, we
+      aim to bridge the gap between knowledge and opportunity by providing young people with the resources they need to succeed. <br />Through this partnership, we combine our strengths in innovation and professional development with
+      Generasi Literat’s expertise in education and literacy, creating a powerful synergy that empowers youth to shape a brighter future. By working hand in hand, we are building a foundation of knowledge, creativity, and leadership that
+      will inspire positive change in the communities we serve.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-800 text-white py-10">
+  <div class="mx-16 pb-10">
+    <div class="flex justify-center items-center gap-10">
+      <!-- Gambar Kiri -->
+      <img src="/gen5.jpg" alt="Workshop" class="shadow-lg w-1/5 h-auto object-cover" />
+      <!-- Gambar Tengah (lebih besar) -->
+      <img src="/gen6.jpg" alt="Historical Visit" class="shadow-lg w-1/5 h-auto object-cover" />
+      <!-- Gambar Kanan -->
+      <img src="/gen5.jpg" alt="Internship Program" class="shadow-lg w-1/5 h-auto object-cover" />
+    </div>
+  </div>
+</section>
