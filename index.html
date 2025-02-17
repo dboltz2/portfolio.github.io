@@ -29,6 +29,12 @@
       rel="stylesheet"
     />
 
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- Swiper JS -->
@@ -123,10 +129,64 @@
 
         <!-- Image Section -->
         <div>
-          <img src="asset_4_crop.jpg" alt="Your Image Description" class="md:hidden p-4" />
+          <img src="asset_4_crop.JPG" alt="Your Image Description" class="md:hidden p-4" />
         </div>
       </div>
     </section>
+
+    <!-- Modal Template -->
+    <!-- Modal -->
+    <div id="modal1" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 transition-opacity duration-500 ease-in-out opacity-0">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg w-full max-w-sm sm:max-w-xl lg:max-w-2xl relative transform scale-95 transition-transform duration-500 ease-in-out mx-4">
+        <!-- Close Button -->
+        <button onclick="closeModal('modal1')" class="absolute top-2 right-6 text-gray-600 hover:text-gray-800 text-2xl">&times;</button>
+        <!-- Modal Content -->
+        <div class="max-h-[85vh] overflow-y-auto">
+          <img src="https://img.freepik.com/free-photo/girls-standing-with-gadgets-hands-looking-screens_23-2148143170.jpg" alt="Digital World" class="w-full h-auto object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Born in a Digital World</h3>
+            <p class="mt-2 text-sm sm:text-base text-gray-600">
+              Generation Z, born between the mid-1990s and early 2010s, is the first generation to grow up entirely immersed in the digital age. They have never known a world without smartphones, social media, or instant internet access.
+              For Gen Z, technology is not just a tool but an integral part of daily life, shaping how they learn, communicate, and interact with the world. They are natural multitaskers, adept at navigating multiple digital platforms
+              simultaneously, and have access to vast amounts of information at their fingertips. <br /><br />
+
+              This generation is redefining creativity, collaboration, and communication in the digital era. They leverage technology to express themselves, build personal brands, and advocate for social issues, often becoming innovators
+              and entrepreneurs at a young age. However, they also face challenges like digital overexposure and the pressures of online life. As trailblazers in a hyperconnected world, Gen Z is not just consuming technology but actively
+              shaping the future of the digital landscape while learning to balance their online and offline lives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal2" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 transition-opacity duration-500 ease-in-out opacity-0">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg w-full max-w-sm sm:max-w-xl lg:max-w-2xl relative transform scale-95 transition-transform duration-500 ease-in-out">
+        <!-- Close Button -->
+        <button onclick="closeModal('modal2')" class="absolute top-2 right-6 text-gray-600 hover:text-gray-800 text-2xl">&times;</button>
+        <!-- Modal Content -->
+        <div class="max-h-[85vh] overflow-y-auto">
+          <img
+            src="https://img.freepik.com/free-photo/young-women-holding-sports-cup_23-2149044696.jpg?t=st=1734409560~exp=1734413160~hmac=0b83f191eff6d72f54bb17c5a1bc64e57da335d0ebdd62d752a415eba5355a93&w=900"
+            alt="Digital World"
+            class="w-full h-full object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-2xl font-bold text-gray-800">Champions of Change</h3>
+            <p class="mt-2 text-gray-600">
+              Generation Z, born between the mid-1990s and early 2010s, has earned the title "Champions of Change" for their proactive stance in shaping the world around them. Growing up in an era marked by rapid technological advancement,
+              global challenges, and social movements, Gen Z is uniquely equipped to lead transformative changes. They are passionate advocates for inclusivity, diversity, and sustainability, leveraging digital platforms to amplify their
+              voices and rally support for causes they believe in. From climate action to social justice, this generation demonstrates a remarkable ability to turn awareness into action, often initiating campaigns, petitions, and grassroots
+              movements to drive meaningful impact. <br /><br />
+
+              What sets Gen Z apart is their entrepreneurial mindset and adaptability. They embrace innovation, using technology not only to solve problems but also to create opportunities. As digital natives, they are unafraid to challenge
+              traditional norms, championing authenticity and transparency in both personal and professional spheres. Despite facing uncertainties in a fast-changing world, Gen Z remains committed to creating a future that is equitable and
+              inclusive, solidifying their role as trailblazers and change-makers of our time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="Contact" class="bg-gray-900">
       <div class="max-w-2xl mx-auto text-white py-10">
@@ -169,10 +229,110 @@
         opacity: 0; /* Awalnya teks disembunyikan */
         transform: translateY(30px); /* Posisikan teks sedikit lebih rendah dari posisi aslinya */
       }
-
-      html {
-        scroll-behavior: smooth;
-      }
     </style>
+
+    <script>
+      // Register GSAP TextPlugin
+      gsap.registerPlugin(TextPlugin, ScrollTrigger);
+
+      // GSAP Typing Effect
+      const typingText = "Welcome to my website ^^"; // Teks yang ingin diketik
+      const typingElement = document.getElementById("typingText");
+      const empoweringElement = document.getElementById("empoweringText");
+
+      // Animasi mengetik teks
+      gsap.to(typingElement, {
+        duration: typingText.length * 0.1, // Durasi total mengetik
+        text: typingText, // Teks yang akan diketik
+        ease: "none", // Tanpa easing, agar efek mengetik konsisten
+        onComplete: () => {
+          // Setelah selesai mengetik, tampilkan teks "Empowering" dengan animasi dari bawah
+          gsap.to(empoweringElement, {
+            opacity: 1,
+            y: 0, // Posisi akhir normal (y = 0)
+            duration: 1, // Durasi animasi
+            ease: "power2.out", // Easing animasi
+            delay: 0.5, // Delay sebelum teks muncul
+          });
+        },
+      });
+
+      // Animasi gambar pertama dengan ScrollTrigger
+      gsap.fromTo(
+        "#aboutUsImage1",
+        { y: 100, opacity: 0 }, // Posisi awal
+        {
+          y: 0, // Posisi akhir
+          opacity: 1, // Muncul sepenuhnya
+          duration: 1.5, // Durasi animasi
+          ease: "power2.out", // Efek ease
+          scrollTrigger: {
+            trigger: "#aboutUsImage1", // Elemen yang memicu animasi
+            start: "top 80%", // Mulai animasi saat elemen berada di 80% viewport
+            toggleActions: "restart none none none", // Animasi diulang saat masuk viewport
+          },
+        }
+      );
+
+      // Animasi gambar kedua dengan ScrollTrigger
+      gsap.fromTo(
+        "#aboutUsImage2",
+        { y: 100, opacity: 0 }, // Posisi awal
+        {
+          y: 0, // Posisi akhir
+          opacity: 1, // Muncul sepenuhnya
+          duration: 2.5, // Durasi animasi
+          ease: "power2.out", // Efek ease
+          scrollTrigger: {
+            trigger: "#aboutUsImage2", // Elemen yang memicu animasi
+            start: "top 80%", // Mulai animasi saat elemen berada di 80% viewport
+            toggleActions: "restart none none none", // Animasi diulang saat masuk viewport
+          },
+        }
+      );
+
+      // Animasi zoom pada gambar dengan ScrollTrigger
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".img-div", // Elemen pemicu
+          start: "top top", // Mulai animasi saat elemen mencapai atas viewport
+          end: "+=300", // Perluasan durasi animasi
+          scrub: 1, // Scroll scrub
+          pin: true, // Elemen tetap berada di tempat
+        },
+      });
+
+      tl.to(".img", {
+        width: "100vw",
+        height: "100vh",
+      });
+
+      // Pastikan elemen #empoweringText tidak langsung terlihat
+      empoweringElement.style.opacity = "0";
+      empoweringElement.style.transform = "translateY(20px)";
+
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove("hidden"); // Tampilkan modal
+        setTimeout(() => {
+          modal.classList.remove("opacity-0", "scale-95");
+        }, 10); // Menambahkan animasi setelah modal muncul
+      }
+
+      function closeModal(modalId) {
+        document.getElementById(modalId).classList.add("hidden"); // Menyembunyikan modal
+      }
+
+      // Tambahkan event listener untuk menutup modal jika area luar modal di-klik
+      window.addEventListener("click", function (event) {
+        const modals = ["modal1", "modal2", "modal3"]; // ID semua modal
+        modals.forEach((modalId) => {
+          const modalElement = document.getElementById(modalId);
+          if (event.target === modalElement) {
+            modalElement.classList.add("hidden");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
